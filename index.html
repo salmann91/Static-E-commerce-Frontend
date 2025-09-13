@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Farmers E-commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="cart">🛒 Cart <span id="cart-count" class="cart-count">0</span></div>
+
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Search for products...">
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div class="categories">
+      <button>Machines</button>
+      <button>Tools</button>
+      <button>Organic</button>
+      <button>Plants</button>
+    </div>
+
+    <!-- Profile Circle  -->
+    <div id="profileBtn" class="profile" aria-haspopup="true">
+      <img id="profileImg" src="im1.jpg" alt="Profile">
+    </div>
+
+    <!-- Profile Dropdown Menu hidden -->
+    <div id="profileMenu" class="dropdown-menu hidden">
+      <ul>
+        <li id="login">Log In</li>
+        <li id="Register">Register</li>
+        <li id="myOrders">My Orders</li>
+        <li id="settings">Settings</li>
+        <li id="logoutBtn">Logout</li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products">
+    <h2>Available Products</h2>
+    <div class="product-grid">
+      <div class="product-card" data-id="1" data-name="Mini Tractor" data-price="1500">
+        <img src="im2.jpg" alt="Mini Tractor">
+        <h3>Mini Tractor</h3>
+        <p>&#8377;270000</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="2" data-name="Farming Tools Set" data-price="300">
+        <img src="im3.jpg" alt="Tools">
+        <h3>Farming Tools Set</h3>
+        <p>&#8377;500</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="3" data-name="Organic Fertilizer" data-price="25">
+        <img src="im4.jpg" alt="Fertilizer">
+        <h3>Organic Fertilizer</h3>
+        <p>&#8377;520</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="4" data-name="Fruit Plant" data-price="10">
+        <img src="im6.jpg" alt="Plant">
+        <h3>Fruit Plant</h3>
+        <p>&#8377;100</p>
+        <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+         <div class="product-card" data-id="3" data-name="Organic Fertilizer" data-price="25">
+        <img src="im4.jpg" alt="Fertilizer">
+        <h3>Organic Fertilizer</h3>
+        <p>&#8377;225</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+       <div class="product-card" data-id="3" data-name="Machines" data-price="25">
+        <img src="im7.jpg" alt="Machines">
+        <h3>Machines</h3>
+        <p>&#8377;350000</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-id="2" data-name="Farming Tools Set" data-price="300">
+        <img src="im3.jpg" alt="Tools">
+        <h3>Farming Tools Set</h3>
+        <p>&#8377;700</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-id="2" data-name="Farming Tools Set" data-price="300">
+        <img src="im3.jpg" alt="Tools">
+        <h3>Farming Tools Set</h3>
+        <p>&#8377;33300</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-id="2" data-name="Plant" data-price="300">
+        <img src="im6.jpg" alt="Plant">
+        <h3>Plants</h3>
+        <p>&#8377;100</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card" data-id="1" data-name="Mini Tractor" data-price="1500">
+        <img src="im2.jpg" alt="Mini Tractor">
+        <h3>Mini Tractor</h3>
+        <p>&#8377;178500</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-id="4" data-name="Fruit Plant" data-price="10">
+        <img src="im6.jpg" alt="Plant">
+        <h3>Fruit Plant</h3>
+        <p>&#8377;100</p>
+        <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+         <div class="product-card" data-id="3" data-name="Machines" data-price="25">
+        <img src="im7.jpg" alt="Machines">
+        <h3>Machines</h3>
+        <p>: &#8377; 190000</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- login/register  form -->
+  <div id="authModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="close">&times;</button>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="auth-form">
+        <h2>Login</h2>
+        <div class="form-row">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="loginPassword">Password</label>
+          <input id="loginPassword" type="password" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Login</button>
+          <button type="button" id="showRegister">Create account</button>
+        </div>
+        <p class="hint">Demo account: <strong>farmer@farm.com</strong> / <strong>12345</strong></p>
+        <p id="loginError" class="error"></p>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="registerForm" class="auth-form hidden">
+        <h2>Create Account</h2>
+        <div class="form-row">
+          <label for="regName">Name</label>
+          <input id="regName" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="regEmail">Email</label>
+          <input id="regEmail" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="regPassword">Password</label>
+          <input id="regPassword" type="password" required>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Register</button>
+          <button type="button" id="showLogin">Back to login</button>
+        </div>
+        <p id="regError" class="error"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- ...existing code... -->
+
+  <!-----    Footer     ---->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Provides best services all over the world for <span>Farmers & Planters </span>. All rights reserved.</p>
+      <p>
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a> | 
+        <a href="#">Contact Us</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+</body>
+</html>
